@@ -20,16 +20,20 @@ const game=document.querySelector('#game'),
 
     // listen for gyess
     guessBtn.addEventListener('click',function(){
+        
         let guess=parseInt(guessInput.value);
+        
         
         // validate
         if(isNaN(guess) || guess < min || guess > min){
-           setMessage(`please enter an number between ${min} and ${max},red`);
+            
+           setMessage(`Please enter an number between ${min} and ${max},red`);
         }
     });
 
     //  set message
-    function setMessage(msg,color){
-        message.style.color=color;
+    function setMessage(msg){
+        
        message.textContent=msg;
+       
     }
